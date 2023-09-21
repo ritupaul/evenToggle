@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+  .even {
+    background-color: yellow;
+  }
+</style>
+<script>
+  // A function to toggle the background color of even numbers
+  function toggleEvenColor() {
+    // Get all the elements with the class "number"
+    let numbers = document.getElementsByClassName("number");
+    // Loop through each element
+    for (let i = 0; i < numbers.length; i++) {
+      // Check if the element contains an even number
+      if (parseInt(numbers[i].innerHTML) % 2 == 0) {
+        // Toggle the class "even" on the element
+        numbers[i].classList.toggle("even");
+      }
+    }
+  }
+</script>
+</head>
+<body>
+
+<button onclick="toggleEvenColor()">Toggle even number highlighting</button>
+<div>
+  <span class="number">1</span>
+  <span class="number">2</span>
+  <span class="number">3</span>
+  <span class="number">4</span>
+  <span class="number">5</span>
+  <span class="number">6</span>
+  <span class="number">7</span>
+  <span class="number">8</span>
+  <span class="number">9</span>
+  <span class="number">10</span>
+</div>
+</body>
+</html>
